@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Alpha Gaming - Esports</title>
+    <!-- Asegúrate que la ruta al CSS sea correcta -->
     <link rel="stylesheet" href="css/style.css"> 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -11,12 +12,15 @@
 </head>
 <body>
 
+    <!-- BARRA DE NAVEGACIÓN -->
     <header class="navbar">
         <div class="container">
             <a href="#inicio" class="logo">
                 <img src="https://cdn.discordapp.com/attachments/1325555049170206721/1385773177812160512/ALPLogo.png?ex=68574958&is=6855f7d8&hm=9c8f64a5d71706b4fd0c62a712a80e8bb21fac868b18941c71965fe60a14d417&" alt="Logo del Equipo">
             </a>
-            <nav>
+            
+            <!-- Menú de navegación con ID para JS -->
+            <nav id="nav-menu">
                 <ul>
                     <li><a href="#sobre-nosotros">Sobre nosotros</a></li>
                     <li><a href="#noticias">Noticias</a></li>
@@ -24,9 +28,17 @@
                     <li><a href="#contacto" class="btn-contacto">Contacto</a></li>
                 </ul>
             </nav>
+
+            <!-- Icono de Hamburguesa para móvil -->
+            <div id="hamburger-icon" class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
         </div>
     </header>
 
+    <!-- SECCIÓN DE INICIO -->
     <section id="inicio" class="hero">
         <div class="hero-content">
             <img src="https://cdn.discordapp.com/attachments/1325555049170206721/1385773177812160512/ALPLogo.png?ex=68574958&is=6855f7d8&hm=9c8f64a5d71706b4fd0c62a712a80e8bb21fac868b18941c71965fe60a14d417&" alt="Logo del Equipo" class="main-logo">
@@ -35,6 +47,7 @@
         </div>
     </section>
 
+    <!-- SECCIÓN SOBRE NOSOTROS -->
     <section id="sobre-nosotros" class="content-section">
         <div class="container">
             <h2>SOBRE NOSOTROS</h2>
@@ -63,6 +76,7 @@
         </div>
     </section>
 
+    <!-- SECCIÓN DE NOTICIAS -->
     <section id="noticias" class="content-section">
         <div class="container">
             <h2>NOTICIAS Y RESULTADOS</h2>
@@ -91,6 +105,7 @@
         </div>
     </section>
 
+    <!-- SECCIÓN DE PATROCINADORES -->
     <section id="patrocinadores" class="content-section">
         <div class="container">
             <h2>NUESTROS PATROCINADORES</h2>
@@ -103,6 +118,7 @@
         </div>
     </section>
 
+    <!-- SECCIÓN DE CONTACTO Y FOOTER -->
     <footer id="contacto">
         <div class="container">
             <h2>CONTACTO</h2>
@@ -120,5 +136,7 @@
         </div>
     </footer>
 
+    <!-- Enlace al archivo JavaScript -->
+    <script src="script.js"></script>
 </body>
 </html>

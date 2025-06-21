@@ -6,7 +6,6 @@
     --color-gris: #cccccc;
 }
 
-
 /* Opcional: añade un efecto de desplazamiento suave al hacer clic en los enlaces */
 html {
     scroll-behavior: smooth;
@@ -51,6 +50,11 @@ a:hover {
     color: var(--color-blanco);
 }
 
+/* Oculta el icono de hamburguesa en la vista de escritorio */
+.hamburger {
+    display: none;
+}
+
 /* --- BARRA DE NAVEGACIÓN --- */
 .navbar {
     background-color: rgba(10, 10, 10, 0.85);
@@ -71,10 +75,10 @@ a:hover {
 }
 
 .navbar .logo img {
-    height: 35px; /* Ajusta esta altura si lo necesitas más grande o pequeño */
+    height: 35px; 
     width: auto;
-    display: block; /* Ayuda a eliminar espacios extra */
-    }
+    display: block; 
+}
 
 .navbar nav ul {
     list-style: none;
@@ -113,7 +117,7 @@ a:hover {
 
 /* --- SECCIÓN INICIO (HERO) --- */
 .hero {
-    height: calc(100vh - 70px); /* Ocupa toda la altura visible menos la navbar */
+    height: calc(100vh - 70px); 
     display: flex;
     align-items: center;
     justify-content: center;
@@ -148,8 +152,8 @@ a:hover {
 
 /* --- SECCIÓN SOBRE NOSOTROS --- */
 .about-us-content {
-    max-width: 850px; /* Limita el ancho del texto para que sea fácil de leer */
-    margin: 0 auto;   /* Centra el bloque de texto en la sección */
+    max-width: 850px; 
+    margin: 0 auto;   
     font-size: 1.1rem;
     line-height: 1.8;
     text-align: left;
@@ -193,7 +197,7 @@ a:hover {
 }
 
 .about-us-content li::before {
-    content: '▶'; /* Puedes cambiarlo por '•', '✔', etc. */
+    content: '▶';
     color: var(--color-rojo);
     position: absolute;
     left: 0;
@@ -256,10 +260,10 @@ a:hover {
 }
 
 .sponsor-logo img {
-    max-width: 180px;  /* Define el ANCHO máximo del logo */
-    max-height: 90px; /* Define la ALTURA máxima del logo */
-    width: auto;       /* Se asegura que la imagen mantenga su proporción */
-    height: auto;      /* Se asegura que la imagen mantenga su proporción */
+    max-width: 180px;  
+    max-height: 90px; 
+    width: auto;       
+    height: auto;      
 }
 
 /* --- FOOTER Y CONTACTO --- */
@@ -295,40 +299,86 @@ footer p {
     color: #666;
 }
 
+
 /* --- ESTILOS RESPONSIVE --- */
 
 /* --- Para Tablets (hasta 768px de ancho) --- */
 @media (max-width: 768px) {
     
     h2 {
-        font-size: 2.8rem; /* Títulos de sección más pequeños */
+        font-size: 2.8rem;
     }
 
     .hero h1 {
-        font-size: 4rem; /* Título principal más pequeño */
+        font-size: 4rem;
     }
 
     .hero .lema {
-        font-size: 1.2rem; /* Lema más pequeño */
+        font-size: 1.2rem;
     }
 
-    /* --- AJUSTES EN LA NAVEGACIÓN --- */
+    /* --- ESTILOS PARA EL MENÚ MÓVIL --- */
     .navbar nav {
-        display: none; /* Ocultamos el menú de navegación normal */
-        /* Próximamente lo reemplazaremos por el menú hamburguesa */
+        position: fixed;
+        top: 70px;
+        left: -100%;
+        width: 100%;
+        height: calc(100vh - 70px);
+        background-color: var(--color-negro);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transition: left 0.3s ease-in-out;
     }
 
+    .navbar nav.active {
+        left: 0;
+    }
+
+    .navbar nav ul {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .navbar nav a {
+        font-size: 1.5rem;
+    }
+
+    /* --- ESTILOS PARA EL ICONO HAMBURGUESA --- */
+    .hamburger {
+        display: block;
+        cursor: pointer;
+    }
+
+    .hamburger .bar {
+        display: block;
+        width: 25px;
+        height: 3px;
+        margin: 5px auto;
+        background-color: var(--color-blanco);
+        transition: all 0.3s ease-in-out;
+    }
+
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+    .hamburger.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+    .hamburger.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    /* --- OTROS AJUSTES --- */
     .navbar .container {
         justify-content: space-between;
     }
-
-    /* --- AJUSTES GENERALES --- */
     .news-item {
-        flex-direction: column; /* Apila la fecha sobre el contenido */
+        flex-direction: column;
         text-align: center;
         gap: 20px;
     }
-
     .news-date {
         border-bottom: 2px solid var(--color-rojo);
         padding-bottom: 15px;
@@ -341,7 +391,7 @@ footer p {
 @media (max-width: 480px) {
 
     body {
-        padding-top: 60px; /* Reducimos el espacio para la navbar */
+        padding-top: 60px;
     }
 
     .navbar .container {
@@ -349,7 +399,7 @@ footer p {
     }
 
     .navbar .logo img {
-        height: 30px; /* Logo un poco más pequeño en la navbar */
+        height: 30px;
     }
 
     h2 {
@@ -392,7 +442,7 @@ footer p {
     }
 
     .social-media a {
-        margin: 0 10px; /* Menos espacio entre iconos sociales */
+        margin: 0 10px;
         font-size: 1.1rem;
     }
 
