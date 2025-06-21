@@ -294,3 +294,109 @@ footer p {
     font-size: 0.9rem;
     color: #666;
 }
+
+/* --- ESTILOS RESPONSIVE --- */
+
+/* --- Para Tablets (hasta 768px de ancho) --- */
+@media (max-width: 768px) {
+    
+    h2 {
+        font-size: 2.8rem; /* Títulos de sección más pequeños */
+    }
+
+    .hero h1 {
+        font-size: 4rem; /* Título principal más pequeño */
+    }
+
+    .hero .lema {
+        font-size: 1.2rem; /* Lema más pequeño */
+    }
+
+    /* --- AJUSTES EN LA NAVEGACIÓN --- */
+    .navbar nav {
+        display: none; /* Ocultamos el menú de navegación normal */
+        /* Próximamente lo reemplazaremos por el menú hamburguesa */
+    }
+
+    .navbar .container {
+        justify-content: space-between;
+    }
+
+    /* --- AJUSTES GENERALES --- */
+    .news-item {
+        flex-direction: column; /* Apila la fecha sobre el contenido */
+        text-align: center;
+        gap: 20px;
+    }
+
+    .news-date {
+        border-bottom: 2px solid var(--color-rojo);
+        padding-bottom: 15px;
+        width: 100%;
+    }
+}
+
+
+/* --- Para Celulares (hasta 480px de ancho) --- */
+@media (max-width: 480px) {
+
+    body {
+        padding-top: 60px; /* Reducimos el espacio para la navbar */
+    }
+
+    .navbar .container {
+        height: 60px;
+    }
+
+    .navbar .logo img {
+        height: 30px; /* Logo un poco más pequeño en la navbar */
+    }
+
+    h2 {
+        font-size: 2.2rem;
+        margin-bottom: 40px;
+    }
+
+    .hero h1 {
+        font-size: 3rem;
+    }
+
+    .hero .lema {
+        font-size: 1rem;
+        letter-spacing: 2px;
+    }
+
+    .hero .main-logo {
+        max-width: 150px;
+    }
+
+    .content-section {
+        padding: 60px 0;
+    }
+
+    .about-us-content {
+        font-size: 1rem;
+        line-height: 1.6;
+    }
+    
+    .about-us-content h3 {
+        font-size: 2rem;
+    }
+
+    .about-us-content h4 {
+        font-size: 1.5rem;
+    }
+
+    .sponsors-grid {
+        gap: 30px;
+    }
+
+    .social-media a {
+        margin: 0 10px; /* Menos espacio entre iconos sociales */
+        font-size: 1.1rem;
+    }
+
+    footer p {
+        font-size: 1rem;
+    }
+}
